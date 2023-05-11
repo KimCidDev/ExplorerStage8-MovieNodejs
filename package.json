@@ -10,10 +10,14 @@
     "type": "git",
     "url": "git+https://github.com/KimCidDev/ExplorerStage8-MovieNodejs.git"
   },
-  "author": "KimCidDev",
+  "keywords": [],
+  "author": "",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/KimCidDev/ExplorerStage8-MovieNodejs/issues"
   },
-  "homepage": "https://github.com/KimCidDev/ExplorerStage8-MovieNodejs#readme"
+  "homepage": "https://github.com/KimCidDev/ExplorerStage8-MovieNodejs#readme",
+  "dependencies": {
+    "express": "^4.18.2"
+  }
 }
