@@ -9,3 +9,6 @@ app.listen(PORT, () => {
 });
 
 app.use(express.json());
+app.get('/', (req, res) => {
+  res.send('Quero um xis Salada');
+});
