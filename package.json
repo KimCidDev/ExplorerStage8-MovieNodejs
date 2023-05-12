@@ -4,8 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "node movieApi/src/server.js"
-    
+    "start": "node movieApi/src/server.js",
+    "dev": "nodemon movieApi/src/server.js"
   },
   "repository": {
     "type": "git",
@@ -20,5 +20,8 @@
   "homepage": "https://github.com/KimCidDev/ExplorerStage8-MovieNodejs#readme",
   "dependencies": {
     "express": "^4.18.2"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.22"
   }
 }

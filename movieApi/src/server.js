@@ -9,6 +9,8 @@ app.listen(PORT, () => {
 });
 
 app.use(express.json());
-app.get('/', (req, res) => {
-  res.send('Quero um xis Salada');
+app.get('/users', (request, response) => {
+  response.status(201).json({
+    favouriteMovie: 'apocalypseNow'
+  });
 });
