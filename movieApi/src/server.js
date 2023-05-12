@@ -2,6 +2,8 @@ const express = require('express');
 
 const app = express();
 
+const UserRoutes = require('./routes/users.routes');
+
 const PORT = 3334;
 
 app.listen(PORT, () => {
@@ -9,8 +11,4 @@ app.listen(PORT, () => {
 });
 
 app.use(express.json());
-app.get('/users', (request, response) => {
-  response.status(201).json({
-    favouriteMovie: 'apocalypseNow'
-  });
-});
+app.use(UserRoutes);

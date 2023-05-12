@@ -1,11 +1,11 @@
-const express = require('express');
-
 const { Router } = require('express');
 
-const app = Router();
+const userRoutes = Router();
 
-app.get('/users', (request, response) => {
+userRoutes.get('/users', (request, response) => {
   response.status(201).json({
     favouriteMovie: 'taxiDriver'
   });
 });
+
+module.exports = userRoutes;
