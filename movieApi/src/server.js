@@ -2,7 +2,7 @@ const express = require('express');
 
 const app = express();
 
-const UserRoutes = require('./routes/users.routes');
+const routes = require('./routes/index');
 
 const PORT = 3334;
 
@@ -11,4 +11,4 @@ app.listen(PORT, () => {
 });
 
 app.use(express.json());
-app.use(UserRoutes);
+app.use(routes);
