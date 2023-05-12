@@ -4,7 +4,7 @@ const userRoutes = Router();
 
 userRoutes.get('/', (request, response) => {
   response.status(201).json({
-    favouriteMovie: 'Drive'
+    favouriteMovie: 'O Alto da Compadecida'
   });
 });
 
