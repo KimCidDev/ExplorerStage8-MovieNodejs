@@ -7,4 +7,4 @@ const NotesControllers = new notesControllers();
 
 userRoutes.post('/', NotesControllers.createNote);
 
-module.exports = userRoutes;
+module.exports = notesRoutes;
