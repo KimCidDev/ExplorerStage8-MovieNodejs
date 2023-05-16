@@ -8,7 +8,7 @@ class UserControllers {
 
     // NÃO ESQUECER DE TRABALHAR NO APPERROR PARA LIDAR "DE MANEIRA AMIGÁVEL" COM OS ERROS;
 
-    const database = await database();
+    const database = await knex();
 
     const hashedPassword = await password(hash, 8);
 
