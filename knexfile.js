@@ -15,6 +15,7 @@ module.exports = {
     migrations: {
       directory: path.resolve(
         __dirname,
+        'movieApi',
         'src',
         'database',
         'knex',
