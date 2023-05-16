@@ -1,15 +1,9 @@
-/**
- * @param { import("knex").Knex } knex
- * @returns { Promise<void> }
- */
-exports.up = function(knex) {
-  
-};
+exports.up = knex =>
+  knex.schema.createTable('movieTags', table => {
+    table.increments('id');
+    table.integer('note_id').references('id').inTable('movieNotes');
+    table.integer('user_id').references('id').inTable('users');
+    table.text('email');
+  });
 
-/**
- * @param { import("knex").Knex } knex
- * @returns { Promise<void> }
- */
-exports.down = function(knex) {
-  
-};
+exports.down = knex => knex.schema.dropTable('movieTags');
