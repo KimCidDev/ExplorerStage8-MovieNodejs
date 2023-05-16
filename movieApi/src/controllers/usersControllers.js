@@ -8,14 +8,14 @@ class UserControllers {
 
     // NÃO ESQUECER DE TRABALHAR NO APPERROR PARA LIDAR "DE MANEIRA AMIGÁVEL" COM OS ERROS;
 
-    const database = await knex();
+    // const database = await knex();
 
-    const hashedPassword = await password(hash, 8);
+    const hashedPassword = await hash(password, 8);
 
     await knex('users').insert({
       name,
       email,
-      hashedPassword
+      password: hashedPassword
     });
 
     return response
