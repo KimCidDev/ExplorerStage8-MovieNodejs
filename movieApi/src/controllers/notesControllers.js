@@ -5,6 +5,10 @@ class NotesControllers {
     const { title, description, rating, tags } = request.body;
     const { user_id } = request.params;
 
+    if (rating < 1 || rating > 5) {
+      console.log('xis salada');
+    }
+
     const [note_id] = await knex('movieNotes').insert({
       title,
       description,

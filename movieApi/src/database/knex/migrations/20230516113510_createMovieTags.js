@@ -3,7 +3,7 @@ exports.up = knex =>
     table.increments('id');
     table.integer('note_id').references('id').inTable('movieNotes');
     table.integer('user_id').references('id').inTable('users');
-    table.text('email');
+    table.text('name');
   });
 
 exports.down = knex => knex.schema.dropTable('movieTags');
