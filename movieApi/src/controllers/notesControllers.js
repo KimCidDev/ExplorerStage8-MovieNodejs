@@ -1,3 +1,5 @@
+const appError = require('../utils/appError');
+
 const knex = require('../database/knex');
 
 class NotesControllers {
@@ -6,7 +8,7 @@ class NotesControllers {
     const { user_id } = request.params;
 
     if (rating < 1 || rating > 5) {
-      console.log('xis salada');
+      throw new appError('A nota deve variar entre 1 e 5');
     }
 
     const [note_id] = await knex('movieNotes').insert({

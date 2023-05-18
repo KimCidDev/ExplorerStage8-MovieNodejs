@@ -1,3 +1,6 @@
+const AppError = require('../utils/appError');
+
+
 const knex = require('../database/knex');
 
 const { hash, compare } = require('bcryptjs');
