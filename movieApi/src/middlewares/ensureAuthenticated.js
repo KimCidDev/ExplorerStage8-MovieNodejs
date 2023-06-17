@@ -1,0 +1,26 @@
+const { verify } = require('jsonwebtoken');
+const appError = require('../utils/appError');
+const authConfig = require('../configs/auth');
+
+function ensureAuthenticaded(request, response, next) {
+  const authHeader = request.headers.authorization;
+
+  if (!authHeader) {
+    throw new appError('JWT Token não informado', 401);
+  }
+
+  const [, token] = authHeader.split(' ');
+
+  try {
+    const { sub: user_id } = verify(token, authConfig.jwt.secret);
+
+    request.user = {
+      id: Number(user_id)
+    };
+    return next();
+  } catch {
+    throw new appError('JWT Token inválido', 401);
+  }
+}
+
+module.exports = ensureAuthenticaded;
